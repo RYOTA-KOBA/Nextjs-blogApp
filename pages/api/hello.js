@@ -1,3 +1,3 @@
 export default function handler(req, res) {
-  res.status(200).json({ text: 'こんにちは' });
+  res.status(200).json({ text: 'Hello! test of vercel' });
 }
