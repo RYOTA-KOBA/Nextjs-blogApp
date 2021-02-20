@@ -42,6 +42,9 @@ export default function Home({ allPostsData }: Props) {
             .)
           </p>
         </section>
+        <Link href="/Profile">
+          <a className="text-xl text-blue-400 hover:text-blue-600">プロフィール</a>
+        </Link>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>
