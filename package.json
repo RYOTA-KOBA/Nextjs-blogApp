@@ -6,21 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
     "prettier:quick": "pretty-quick --staged",
     "lint": "eslint pages/** --ext .js,.jsx",
     "lint:fix": "npm lint --fix"
   },
   "dependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^26.0.20",
+    "@types/react-test-renderer": "^17.0.1",
     "date-fns": "^2.17.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1",
     "gray-matter": "^4.0.2",
+    "jest": "^26.6.3",
     "js-base64": "^3.6.0",
     "next": "^10.0.0",
     "node-fetch": "^2.6.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-test-renderer": "^17.0.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "sharp": "^0.26.3"
+    "sharp": "^0.26.3",
+    "ts-jest": "^26.5.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.30",
