@@ -9,3 +9,25 @@ services:
     command: sh -c "npm run dev"
     ports:
       - '3000:3000'
+  db:
+    image: mysql:latest
+    restart: always
+    hostname: my-mysql
+    env_file:
+      - .env
+    environment:
+      MYSQL_USER: sample_user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: sample_db
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    expose:
+      - '3306'
+    # データを永続化させる場合
+    volumes:
+      # 初期データを投入するSQLが格納されているdir
+      - ./db/mysql_init:/docker-entrypoint-initdb.d
+      # 永続化するときにマウントするdir
+      - ./db/mysql_data:/var/lib/mysql
+    tty: true
