@@ -36,3 +36,5 @@ yarn-error.log*
 db
 
 prisma/migrations
+
+node
